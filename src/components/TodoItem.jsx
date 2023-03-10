@@ -19,7 +19,7 @@ function TodoItem(props) {
                 <hr/>
                 <button className="btn btn-danger delete-btn" data-item-id={props.id} onClick={props.onRemove}>Удалить
                 </button>
-                <Link to={`/todo/${props.id}`}>info</Link>
+                <Link className="btn btn-secondary" to={`/todo/${props.id}`}>info</Link>
             </div>
         </div>
     );

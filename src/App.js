@@ -11,7 +11,10 @@ function App() {
             <main>
                 <div className="container">
                     <Heading/>
-                    <TodoBox/>
+                    <Routes>
+                        <Route path="/" element={<TodoBox/>}/>
+                        <Route path="/todo/:id" element={<SingleTodo/>}/>
+                    </Routes>
                 </div>
             </main>
         </div>

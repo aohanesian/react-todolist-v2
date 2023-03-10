@@ -79,10 +79,7 @@ function TodoBox(props) {
                 </form>
             </div>
             <div className="col-8">
-                <Routes>
-                    <Route path="/todo/:id" todos={todos} element={<SingleTodo/>}/>
-
-                <Route path="/" element={ <div className="row" id="todoItems">
+                <div className="row" id="todoItems">
                     {todos.map((item) => (
                         <React.Fragment key={item.id}>
                             <TodoItem id={item.id} title={item.title} description={item.description}
@@ -90,8 +87,7 @@ function TodoBox(props) {
                                       onRemove={handleRemoveItem(item.id)}/>
                         </React.Fragment>
                     ))}
-                </div>}/>
-                </Routes>
+                </div>
             </div>
         </div>
     );

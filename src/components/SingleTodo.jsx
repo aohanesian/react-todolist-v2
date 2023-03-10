@@ -7,12 +7,14 @@ function SingleTodo({todos}) {
     const todo = localTodos.find((item) => item.id === parseInt(id));
 
     return (
-        <div>
-            <h2>{todo.title}</h2>
-            <p>{todo.description}</p>
-            <p>{todo.isCompete.toString()}</p>
-            <Link to="/">Back</Link>
-        </div>
+            <div className="card">
+                    <div className="card-body">
+                        <h5 className="card-title">{todo.title}</h5>
+                        <p className="card-text">{todo.description}</p>
+                        <p className="card-text">{todo.isCompete.toString()}</p>
+                        <Link className="btn btn-primary" to="/">Back</Link>
+                    </div>
+            </div>
     );
 }
 
